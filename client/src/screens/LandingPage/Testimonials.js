@@ -8,6 +8,7 @@ function Testimonials() {
   const [testimonialList,setTestimonialList] = useState([])
 
   useEffect(() => {
+    //axios get req to fetch limited amount of comments
     axios.get("http://localhost:3001/comments/fetchsome").then((res)=>{
       setTestimonialList(res.data)
     })
@@ -23,8 +24,7 @@ function Testimonials() {
           <h1 className="text-white sm:text-inherit">Customer comments<br /></h1>
           <p className="text-white sm:text-inherit">Popular customers who are satisfied with our work.</p>
 
-          {/* Rate Calculator Component */}
-          {/* <div><Rate value={4.5} className='flex' /></div> */}
+          
         </div>
 
         <div className="flex-1 flex flex-col gap-4 my-10">
@@ -42,6 +42,9 @@ function Testimonials() {
                 </div>
               </div>  
             ))
+          }
+          {
+            //View more to view more comments
           }
           <Link to="/contactus"><span className="btn-sty4">View More</span></Link>
         </div>

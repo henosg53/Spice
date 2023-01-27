@@ -1,3 +1,4 @@
+//Frequently asked questions component
 import React from "react";
 
 

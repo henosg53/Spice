@@ -1,6 +1,5 @@
 import React from "react";
 
-
 function AboutUs() {
   return (
     <div className="w-full flex justify-center py-20">
@@ -28,7 +27,6 @@ function AboutUs() {
           
         </div>
 
-        {/* <Footer/> */}
         
       </div>
     </div>

@@ -1,21 +1,21 @@
+//image slider component
 import React  from "react";
-// import { useState } from "react";
 import { Fade} from "react-slideshow-image";
 import 'react-slideshow-image/dist/styles.css';
 import '../App.css'
-// import useMediaQuery from "../useMediaQuery";
 
 function Slider(){
+    //images url
     const images = [
         "/slider_imgs/slide-img.jpg",
         "/slider_imgs/slide-img2.jpg",
         "/slider_imgs/slide-img3.jpg"
     ]
-    // const matches = useMediaQuery('(max-width: 600px)')
         return(
             
             <Fade>
-                {images.map((image,index)=>{
+                {//mapping images array
+                images.map((image,index)=>{
                     return(
                     <div className="h-96 sm:h-[500px]" key={index}>
                

@@ -1,5 +1,28 @@
 ----Description----
+A company profile and blog site 
+tools
+front-end{
+    react,
+    tailwindcss
+}
+back-end{
+    nodejs
+    express
+    mysql
+}
 
+---- Init ----
+To initialize the project, import all packages listed in package.json,
+to do that you must--- 
+    -open terminal in Spice dir
+        > cd admin
+        > npm init
+        > cd ..
+        > cd client
+        > npm init
+        > cd ..
+        > cd server
+        > npm init
 
 
 ------File Tree-----

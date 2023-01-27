@@ -1,3 +1,4 @@
+//comment component for intro
 import BlogImg from '../assets/images/2.png'
 function Comment(){
     return(

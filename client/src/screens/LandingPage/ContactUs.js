@@ -8,12 +8,14 @@ import {Formik,Form} from 'formik'
 
 
 function ContactUs() {
+  //fullname, email, comment states
   const [email,setEmail] = useState('')
   const [fullname,setFullname] = useState('')
   const [comment, setComment] = useState('')
 
 
   const submitComment =()=>{
+    //axios post req to create a comment
     axios.post('http://localhost:3001/comments/create',
             {
                 fullname: fullname,

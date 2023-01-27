@@ -1,3 +1,4 @@
+//modules
 const express = require("express")
 const upload = require('express-fileupload')
 const path = require('path')
@@ -10,6 +11,7 @@ app.use(express.json())
 app.use(cors())
 app.use(upload())
 
+//models
 const db = require('./models')
 const {Blogs} = require('./models')
 
@@ -25,17 +27,13 @@ app.use('/comments',commentRouter)
 app.use('/admin',admin)
 app.use('/subscriptions',subscriptionsRouter)
 
+//fetch images
 app.get('/uploads/:filename',(req,res)=>{
-    // var fileUrl = "."+req.url
-    // console.log(JSON.stringify(req.params))
-    // console.log(__dirname)
-    //res.send(fileUrl)
     var options = {
-        root : path.join(__dirname+'/uploads/'),
-        // filePath: path.join(__dirname+'/uploads/')
+        root : path.join(__dirname+'/uploads/')
+        
     }
     var filename = req.params.filename
-    // console.log(options.filePath)
     res.sendFile(filename,options,(err)=>{
         if(err)
             console.error(err);
@@ -45,6 +43,8 @@ app.get('/uploads/:filename',(req,res)=>{
     })
 
 })
+
+//remove blog by id and delete file related
 app.post("/remove/:id",async (req,res)=>{
     const id = req.params.id
     const blog = await Blogs.findOne({
@@ -73,6 +73,7 @@ app.post("/remove/:id",async (req,res)=>{
 })
 
 
+//sequelize database connection
 db.sequelize.sync().then(()=>{
     app.listen(3001,()=>{
         console.log('started at port %d',3001)

@@ -1,4 +1,4 @@
-
+//subscription or newsletter model
 module.exports = (sequelize,DataTypes) => {
     const Subscriptions = sequelize.define("Subscriptions",{
         email: {

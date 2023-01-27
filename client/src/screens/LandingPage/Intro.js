@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import {ReactComponent as MobileViewImg} from '../../assets/images/mobile-view.svg';
+
 
 function Intro() {
   return (

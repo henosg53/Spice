@@ -26,7 +26,7 @@ function OurBlog() {
       <NewsLetter />
        
         <h2 className="pb-10">Latest News and Blogs</h2>
-        {/* <p className="text-xl">Follow up by clicking the notifications button</p><br></br> */}
+       
         <div className="flex flex-wrap gap-3 w-full mt-12 justify-center ">
           {
             // Listing Blog Object from variable

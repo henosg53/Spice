@@ -1,7 +1,4 @@
 import React from "react";
-// import FreeToUse from '../../assets/images/FreeToUse-Icon.png';
-// import BookNow from '../../assets/images/BookNow-Icon.png';
-// import VettedFixers from '../../assets/images/VettedFixers-Icon.png';
 
 function Services() {
   return (
@@ -16,7 +13,7 @@ function Services() {
             
             <div className="card-sty1 min-w-[200px] sm:w-[550px]  flex-1 my-3">
               <div className="py-2">
-                {/* <img src={FreeToUse} alt="Free to use" className='w-[40px]' /> */}
+               
               </div>
               <h4 className="text-center">Import/Export</h4>
               <p>We provide services.We provide services.We provide services.We provide services.We provide services.</p>

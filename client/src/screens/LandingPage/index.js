@@ -19,16 +19,6 @@ function Index() {
       <AboutUs/>
       <Testimonials/>
       <FAQ/>
-    
-      
-
-      {/* <WhyFixer />
-      <Features />
-      <MoreFeatures />
-      <FAQ />
-      <Testimonials />
-      <OurBlog /> */}
-      {/* <Login/> */}
       <Footer />
       <div className="p-10">&nbsp;</div>
     </div>

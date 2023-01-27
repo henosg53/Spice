@@ -10,7 +10,7 @@ function Footer() {
     <div className="w-full flex flex-col items-center pt-20 mt-10">
       <div className="sw flex flex-wrap gap-20">
 
-        {/* <h2 className="w-full sm:w-auto">Spice</h2> */}
+        {/* Navigation */}
         
         <div className="flex flex-col grow flex-1 gap-4">
           <p className="tracking-[2px] font-ArchivoBlack">Navigation</p>

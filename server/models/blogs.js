@@ -1,4 +1,4 @@
-
+//blogs model
 module.exports = (sequelize,DataTypes) => {
     const Blogs = sequelize.define("Blogs",{
         title: {
