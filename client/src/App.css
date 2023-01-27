@@ -1,0 +1,243 @@
+* {
+  @apply font-sans text-sm;
+}
+
+h1 {
+  @apply text-5xl font-black font-ArchivoBlack antialiased;
+}
+h2 {
+  @apply text-3xl font-black font-ArchivoBlack capitalize leading-10;
+}
+h3 {
+  @apply text-2xl font-bold font-ArchivoBlack capitalize;
+}
+h4 {
+  @apply text-base font-bold font-ArchivoBlack leading-8;
+}
+
+input {
+  @apply border border-slate-200 p-2 px-5;
+}
+
+
+.avatar {
+  display: inline-block;
+  background-color: #ccc;
+  border-radius: 100%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 0;
+}
+
+
+.bg-fixer {
+  @apply bg-[url('./assets/images/pattern.png')];
+  /* background-image: url('./assets/images/pattern.png'); */
+  /* background-size: 100% 100%; */
+}
+.bg-fit {
+  background-size: 100% 100%;
+  background-position: top 0 left 10%;
+}
+
+.btn-sty1 {
+  @apply bg-transparent border border-slate-300 p-1 px-4 inline-block self-baseline uppercase text-[10px] font-semibold tracking-wider transition-all cursor-pointer;
+}
+.btn-sty1:hover {
+  @apply text-blue-300 border-blue-300 shadow-lg shadow-slate-300;
+}
+.btn-sty2 {
+  @apply bg-primary inline-block p-1 px-3 inline-block self-baseline uppercase text-[10px] font-semibold tracking-wider transition-all cursor-pointer;
+}
+.btn-sty2:hover {
+  @apply bg-primary/90 text-white shadow-lg shadow-slate-300;
+}
+.btn-sty3 {
+  @apply bg-prime text-white inline-block p-2 px-5 inline-block  rounded-sm uppercase text-[10px] font-semibold tracking-wider transition-all cursor-pointer;
+}
+.btn-sty3:hover {
+  @apply bg-prime/70 text-slate-800 shadow-lg shadow-slate-300;
+}
+.btn-sty4 {
+  @apply bg-slate-900 text-white inline-block p-2 px-5 inline-block  w-fit rounded-sm uppercase text-[10px] font-semibold tracking-wider transition-all cursor-pointer;
+}
+.btn-sty4:hover {
+  @apply bg-slate-800 text-slate-50 shadow-lg shadow-slate-300;
+}
+
+.card-sty1 {
+  @apply bg-white text-dark p-4;
+  box-shadow: 0 0 15px 0 #ccc;
+  transition: all .3s;
+
+}
+.card-sty1:hover {
+  box-shadow: 0 0 24px 0 #aaa;
+}
+.card-sty1.quote {
+  position: relative;
+}
+.card-sty1.quote::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0 10px;
+  background-image: url('./assets/images/quote.png');
+  background-size: 100% 100%;
+  width: 20px;
+  height: 20px;
+}
+
+.card-sty2 {
+  @apply bg-slate-200 rounded-xl relative min-w-[200px] overflow-hidden hover:shadow-2xl hover:shadow-black transition-all;
+}
+.card-sty2:hover .img-cont img {
+  @apply scale-105;
+}
+.card-sty2 .img-cont {
+  @apply absolute z-10 h-full;
+}
+.card-sty2 .img-cont img {
+  @apply h-full w-full object-cover transition-transform duration-1000;
+}
+.card-sty2 .title {
+  @apply w-full p-6 text-white bg-gradient-to-br from-black/60 to-transparent z-20 absolute top-0;
+}
+.card-sty2 .description {
+  @apply w-full p-6 text-white bg-gradient-to-br from-black/60 to-transparent z-20 absolute bottom-0;
+}
+
+
+.icon {
+  @apply bg-prime w-[28px] h-[28px] rounded-full  flex justify-center items-center transition-all;
+}
+.icon:hover {
+  @apply scale-110 shadow-md shadow-slate-600;
+}
+.icon img {
+  @apply scale-[.7];
+}
+
+
+.list-sty1 > li,
+.list-sty2 > li {
+  list-style: none;
+  list-style-position: outside;
+}
+.list-sty1 > li:before,
+.list-sty2 > li:before {
+  content: '';
+  vertical-align: middle;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  margin-right: 5px;
+  background-image: url(./assets/images/TickMark.svg);
+  background-size: cover;
+}
+.list-sty2 > li:before {
+  background-image: url(./assets/images/Help-Icon.png);
+}
+
+
+.test {
+  border: 1px solid red;
+}
+
+.menu-btn{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+.menu-btn span,
+.menu-btn:before,
+.menu-btn:after{
+	content: "";
+	position: absolute;
+	top: calc(50% - 1px);
+	width: 80%;
+	border-bottom: 2px solid #000;
+	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.menu-btn:before{
+  transform: translateY(-8px);
+}
+.menu-btn:after{
+  transform: translateY(8px);
+}
+.menu-btn.open span {
+  transform: translateX(-110%);
+  border: transparent;
+}
+.menu-btn.open:before {
+  transform: rotate(45deg);
+}
+.menu-btn.open:after {
+  transform: rotate(-45deg) ;
+}
+
+
+
+
+
+/* SVG Animations */
+
+
+/* #LocCircle1 {
+  animation: locate infinite ease-in 1s;
+  transform-origin: center;
+  transform-box: fill-box;
+} */
+#LocImage1 {
+  animation: locate2 infinite ease-in 2s;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#fixerUser1 {
+  animation: locate infinite ease-in 1.5s;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#searchButton {
+  animation: slide ease-in .2s;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes locate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes locate2 {
+  0% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(-1px);
+  }
+}
+@keyframes slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
