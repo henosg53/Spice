@@ -1,6 +1,7 @@
 const express = require("express")
 const upload = require('express-fileupload')
 const path = require('path')
+const fs = require('fs')
 
 const app = express()
 const cors = require('cors')
@@ -10,6 +11,7 @@ app.use(cors())
 app.use(upload())
 
 const db = require('./models')
+const {Blogs} = require('./models')
 
 //Routes
 const blogRouter = require('./routes/blogs')
@@ -43,6 +45,33 @@ app.get('/uploads/:filename',(req,res)=>{
     })
 
 })
+app.post("/remove/:id",async (req,res)=>{
+    const id = req.params.id
+    const blog = await Blogs.findOne({
+        where: {id:id}
+    })
+    var filename = blog.img
+    var filePath = path.join(__dirname+'/uploads/'+filename)
+    console.log(filePath)
+    
+    fs.unlink(filePath,function (err){
+        if(err) return console.log(err)
+        console.log('file deleted')
+    })
+
+    const result = await Blogs.destroy({
+        where: {id: id},
+    })
+    console.log(result)
+    if(result){
+        res.json(result)
+    }
+    else{
+        res.json({error: "couldn't delete"})
+    }
+   
+})
+
 
 db.sequelize.sync().then(()=>{
     app.listen(3001,()=>{

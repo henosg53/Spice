@@ -14,23 +14,24 @@ router.get("/byId/:id",async (req,res)=>{
     
     res.json(blog)
 })
-router.post("/remove/:id",async (req,res)=>{
-    const id = req.params.id
 
-    const result = await Blogs.destroy({
-        where: {id: id},
-    })
-    console.log(result)
-    if(result){
-        res.json(result)
-    }
-    else{
-        res.json({error: "couldn't delete"})
-    }
+// router.post("/remove/:id",async (req,res)=>{
+//     const id = req.params.id
+
+//     const result = await Blogs.destroy({
+//         where: {id: id},
+//     })
+//     console.log(result)
+//     if(result){
+//         res.json(result)
+//     }
+//     else{
+//         res.json({error: "couldn't delete"})
+//     }
    
-    // const blog = await Blogs.findByPk(id)
-    // res.json(blog)
-})
+//     // const blog = await Blogs.findByPk(id)
+//     // res.json(blog)
+// })
 
 
 router.post("/create", async(req,res)=>{
